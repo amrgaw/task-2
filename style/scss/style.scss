@@ -1,0 +1,184 @@
+//#region global setting
+
+@use "./fontType";
+:root {
+  --text-main-third: #95e1d3;
+}
+
+// header title font
+.text-ht {
+  color: #333;
+  font-size: 20px;
+  font-weight: 400;
+}
+.bg-light-grey {
+  background-color: #f8f8f8;
+}
+@media screen and (min-width: 1200px) {
+  .text-p-7 {
+    padding-inline: 200px !important;
+  }
+}
+
+//header description font
+.text-hd {
+  color: #333;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+//font type kaushan
+.ft-kaushan {
+  font-family: "Kaushan Script", cursive;
+}
+
+//reset img setting
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+//adding underline
+.text-underline {
+  position: relative;
+}
+.text-underline::after {
+  content: "";
+  position: absolute;
+  background-color: red;
+  top: 40px;
+  left: calc(50% - 30px);
+  opacity: 0.5;
+  width: 60px;
+  height: 2px;
+}
+
+body,
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+.text-c-thd {
+  color: var(--text-main-third);
+}
+.text-c-grey {
+  color: #333;
+}
+.ts-7 {
+  font-size: 0.8rem;
+}
+//#endregion
+
+.about-us {
+  .img-section {
+    .img-card {
+      background-color: #95e1d3;
+      position: relative;
+      > img {
+        width: 100%;
+        z-index: 0;
+        transition: all 0.3s ease-out;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(100%);
+        height: calc(100%);
+        opacity: 0;
+        z-index: 2;
+        background-image: linear-gradient(
+          rgba(243, 129, 129, 0.9),
+          rgba(252, 227, 138, 0.9)
+        );
+        transition: all 0.3s ease-out;
+      }
+      &:hover .overlay,
+      &:hover > img {
+        transform: translate(-10px, -10px);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.number-facts {
+  background-color: #95e1d3;
+  .wrapper {
+    background-color: white;
+  }
+
+  .fact {
+    background-color: #95e1d3;
+    flex: 1;
+    margin-inline: 0.5px;
+    &:first-child {
+      margin-inline-start: 1px;
+    }
+    &:last-child {
+      margin-inline-end: 1px;
+    }
+
+    h2 {
+      font-size: 65px;
+      font-weight: 700;
+    }
+    h3 {
+      font-size: 14px;
+    }
+  }
+}
+
+.hero-slider {
+  height: 100vh !important;
+  background-image: url("../../assets/hero-slider/bg-hero-slider.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.unique-design {
+  background-image: url("../../assets/unique-design/bg-unique-design.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+// .what-we-do {
+//   .carousel-item {
+//     i {
+//       width: 50px;
+//     }
+//   }
+// }
+
+.meet-our-team {
+  .img-section {
+    .img-card {
+      background-color: #95e1d3;
+      position: relative;
+      > img {
+        width: 100%;
+        z-index: 0;
+        transition: all 0.3s ease-out;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(100%);
+        height: calc(100%);
+        opacity: 0;
+        z-index: 2;
+        background-image: linear-gradient(
+          rgba(243, 129, 129, 0.9),
+          rgba(252, 227, 138, 0.9)
+        );
+        transition: all 0.3s ease-out;
+      }
+      &:hover .overlay,
+      &:hover > img {
+        transform: translate(-10px, -10px);
+        opacity: 1;
+      }
+    }
+  }
+}
